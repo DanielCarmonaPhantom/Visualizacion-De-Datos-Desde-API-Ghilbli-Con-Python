@@ -102,5 +102,17 @@ Para obtener un valor dentro de una llave, mandamos a llamar el espacio de su in
 films[0]['title']
 ```
 ```
-    'Castle in the Sky'
+'Castle in the Sky'
 ```
+
+### 3.1 Iteración de los datos
+
+Ahora que tenemos los datos y sabemos como obtener datos por su indice y llave, podemos iterar para obtener datos interesantes
+
+#### Obten er longitud total de películas que existen
+```
+len(films)
+``````
+20
+```
+
