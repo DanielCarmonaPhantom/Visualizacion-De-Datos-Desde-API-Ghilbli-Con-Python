@@ -1,5 +1,5 @@
 # Proyecto_Visualizacion-De-Datos-Desde-Api-Ghilbli-Con-Python
-![](https://images8.alphacoders.com/105/thumb-1920-1053126.jpg)
+![](https://i.imgur.com/KJ1eMqF.jpg)
 
 Para este proyecto, se utilizara la documentación de la [Api de Studio Ghilbli](https://ghibliapi.herokuapp.com/) que se encuentra en su versión **1.0.1** y se utilizara **Python** para su extración de datos, **Pandas** para el manejo y **[Matplotly](https://matplotlib.org/?fbclid=IwAR2_L-pd4Ycnjd4WZWuP8us9L4Z07844QQ9gjTHtHD7GskLTeCh-c-03hro)** para su graficación
 
@@ -149,4 +149,58 @@ The Wind Rises
 The Tale of the Princess Kaguya
 When Marnie Was There
 ```
+
+## 4. Visualización de datos.
+
+A partir de aqui termina la explicación de como mandar a llamar la API y como manejar los datos.
+
+### 4.1 Importamos Pandas y Matploly
+
+```
+import pandas as pd
+```
+```
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
+Hare las peticiones a todos los endspoints
+```
+urlFilms = 'https://ghibliapi.herokuapp.com/films'
+urlPeople = 'https://ghibliapi.herokuapp.com/people'
+urlLocation = 'https://ghibliapi.herokuapp.com/locations'
+urlSpecies = 'https://ghibliapi.herokuapp.com/species'
+urlVehicles = 'https://ghibliapi.herokuapp.com/vehicles'
+```
+y guardare la respuiesta en las variables para poder manipular todos nuestros datos.
+```
+%%time
+response1 = requests.get(urlFilms)
+response2 = requests.get(urlPeople)
+response3 = requests.get(urlLocation)
+response4 = requests.get(urlSpecies)
+response5 = requests.get(urlVehicles)
+
+films = response1.json()
+people = response2.json()
+location = response3.json()
+species = response4.json()
+vehicles = response5.json()
+```
+
+Transformo en dataframe una variable 
+
+```
+df = pd.DataFrame(films)
+df
+```
+
+|title  | description | director | release_date | rt_score  | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
+| Castle in the Sky  | The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world. | Hayao Miyazaki  | 1986  | 95  | 
+| My Neighbor Totoro  | wo sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by Totoros, magical spirits of the forest. When the youngest runs away from home, the older sister seeks help from the spirits to find her.  | Hayao Miyazaki  | 1988  | 93  | 
+| Kiki's Delivery Service | A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.  | Hayao Miyazaki  | 1989  | 96  | 
+| Whisper of the Hear  | Shizuku lives a simple life, dominated by her love for stories and writing. One day she notices that all the library books she has have been previously checked out by the same person: 'Seiji Amasawa'. Curious as to who he is, Shizuku meets a boy her age whom she finds infuriating, but discovers to her shock that he is her 'Prince of Books'. As she grows closer to him, she realises that he merely read all those books to bring himself closer to her. The boy Seiji aspires to be a violin maker in Italy, and it is his dreams that make Shizuku realise that she has no clear path for her life. Knowing that her strength lies in writing, she tests her talents by writing a story about Baron, a cat statuette belonging to Seiji's grandfather.  | Yoshifumi Kondō  | 1995 | 91  | 
+| Princess Mononoke  |Ashitaka, a prince of the disappearing Ainu tribe, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to protect the forest, and Lady Eboshi, who is trying to destroy it. Ashitaka must find a way to bring balance to this conflict.  | Hayao Miyazaki  |1997  | 92  | 
+| Spirited Away  | Spirited Away is an Oscar winning Japanese animated film about a ten year old girl who wanders away from her parents along a path that leads to a world ruled by strange and unusual monster-like animals. Her parents have been changed into pigs along with others inside a bathhouse full of these creatures. Will she ever see the world how it once was? | Hayao Miyazaki  | 2001  | 97  | 
+
 
