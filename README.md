@@ -273,3 +273,4 @@ Visualizaremos en una gráfica en de pastel como fue la distribuición de los di
 df.director.value_counts().plot(kind="pie")
 ```
 
+![](https://raw.githubusercontent.com/DevPhantomUNAM/Proyecto_Visualizacion-De-Datos-Desde-API-Ghilbli-Con-Python/main/assets/img/gra1.jpg)
