@@ -1,5 +1,5 @@
 # Proyecto_Visualizacion-De-Datos-Desde-Api-Ghilbli-Con-Python
-![](https://i.imgur.com/KJ1eMqF.jpg)
+![](https://images8.alphacoders.com/105/thumb-1920-1053126.jpg)
 
 Para este proyecto, se utilizara la documentación de la [Api de Studio Ghilbli](https://ghibliapi.herokuapp.com/) que se encuentra en su versión **1.0.1** y se utilizara **Python** para su extración de datos, **Pandas** para el manejo y **[Matplotly](https://matplotlib.org/?fbclid=IwAR2_L-pd4Ycnjd4WZWuP8us9L4Z07844QQ9gjTHtHD7GskLTeCh-c-03hro)** para su graficación
 
