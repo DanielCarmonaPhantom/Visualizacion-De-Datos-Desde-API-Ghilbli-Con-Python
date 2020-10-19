@@ -384,7 +384,6 @@ for i in people:
     print(i['name'])
 ```
 
-```
 * Pazu
 * Lusheeta Toel Ul Laputa
 * Dola
@@ -428,7 +427,79 @@ for i in people:
 * Colonel Muska
 * Porco Rosso
 * Sosuke
+
 ```
- 
+peopledf = pd.DataFrame(people)
+peopledf
+```
+
+| name | gender|
+| ------------- | ------------- |
+| Porco Rosso  | Male |
+| Baron Humbert von Gikkingen  | Male	  |
+| Totoro  | NA	 |
+| Cat King  | Male	  |
+
+Para optener los personajes con genero 'Female' hacemos una evaluación
+
+```
+len(peopledf[peopledf.gender == "Female" ])
+```
+```
+13
+```
+
+```
+peopledf.gender.value_counts()
+```
+
+```
+Male      27
+Female    13
+NA         3
+```
+
+![](https://raw.githubusercontent.com/DevPhantomUNAM/Proyecto_Visualizacion-De-Datos-Desde-API-Ghilbli-Con-Python/main/assets/img/gra3.jpg)
+
+### 4.4 Las mejores 5 películas de studio Ghilbli
+
+Ahora que sabemos los films más polulares y los personajes, podemos sacar los personajes de estas películas.
+
+```
+df[df.rt_scoreINT > 95].title
+```
+1              Grave of the Fireflies
+3             Kiki's Delivery Service
+4                      Only Yesterday
+10                      Spirited Away
+18    The Tale of the Princess Kaguya
+
+### 4.5 Location
+
+```
+locationdf = pd.DataFrame(location)
+locationdf.head()
+```
+
+| name  | terrain |
+| ------------- | ------------- |
+| Irontown	  | Mountain	  |
+| Gutiokipanja	  | Hill  |
+| The Cat Kingdom  | Plain	  |
+| The Marsh House	  | Marsh  |
+
+### 4.6 Species
+
+```
+speciesdf = pd.DataFrame(species)
+speciesdf
+```
+
+| name  | 
+| ------------- | 
+| Human	  | 
+| Totoro	|	  
+| Spirit	  | 
+| Cat		  |
 
 
