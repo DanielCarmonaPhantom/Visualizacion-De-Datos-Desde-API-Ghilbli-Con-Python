@@ -212,23 +212,40 @@ df
 df.director
 ```
 
-.0           Hayao Miyazaki
-.1            Isao Takahata
-.2           Hayao Miyazaki
-.3           Hayao Miyazaki
-.4            Isao Takahata
-.5           Hayao Miyazaki
-.6            Isao Takahata
-.7          Yoshifumi Kondō
-.8           Hayao Miyazaki
-.9            Isao Takahata
-.10          Hayao Miyazaki
-.11         Hiroyuki Morita
-.12          Hayao Miyazaki
-.13           Gorō Miyazaki
-.14          Hayao Miyazaki
-.15    Hiromasa Yonebayashi
-.16           Gorō Miyazaki
-.17          Hayao Miyazaki
-.18           Isao Takahata
-.19    Hiromasa Yonebayashi
+```
+0.           Hayao Miyazaki
+1.            Isao Takahata
+2.           Hayao Miyazaki
+3.           Hayao Miyazaki
+4.            Isao Takahata
+5.           Hayao Miyazaki
+6.            Isao Takahata
+7.         Yoshifumi Kondō
+8.          Hayao Miyazaki
+9.           Isao Takahata
+10.          Hayao Miyazaki
+11.         Hiroyuki Morita
+12.          Hayao Miyazaki
+13.           Gorō Miyazaki
+14.          Hayao Miyazaki
+15.    Hiromasa Yonebayashi
+16.           Gorō Miyazaki
+17.          Hayao Miyazaki
+18.           Isao Takahata
+19.    Hiromasa Yonebayashi
+```
+
+```
+df.director.value_counts()
+```
+
+```
+Hayao Miyazaki          9
+Isao Takahata           5
+Gorō Miyazaki           2
+Hiromasa Yonebayashi    2
+Hiroyuki Morita         1
+Yoshifumi Kondō         1
+Name: director, dtype: int64
+```
+
