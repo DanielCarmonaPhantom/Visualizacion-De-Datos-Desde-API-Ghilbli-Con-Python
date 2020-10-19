@@ -469,10 +469,11 @@ Ahora que sabemos los films más polulares y los personajes, podemos sacar los p
 df[df.rt_scoreINT > 95].title
 ```
 1.              Grave of the Fireflies
-3.             Kiki's Delivery Service
-4.                      Only Yesterday
-10.                      Spirited Away
-18.    The Tale of the Princess Kaguya
+2.             Kiki's Delivery Service
+3.                      Only Yesterday
+4.                      Spirited Away
+5.    The Tale of the Princess Kaguya
+
 
 ### 4.5 Location
 
