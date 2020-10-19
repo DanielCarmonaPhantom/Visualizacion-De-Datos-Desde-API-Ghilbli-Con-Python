@@ -274,3 +274,161 @@ df.director.value_counts().plot(kind="pie")
 ```
 
 ![](https://raw.githubusercontent.com/DevPhantomUNAM/Proyecto_Visualizacion-De-Datos-Desde-API-Ghilbli-Con-Python/main/assets/img/gra1.jpg)
+
+### 4.2.2 Evaluaremos la calificación que obtuvo cada film
+Como los valores de rt_score los tenemos en string, los pasaremos a una nueva columan transformada en entero cada elemento
+
+```
+df["rt_scoreINT"] = ""
+```
+```
+valores = df.rt_score.astype(int)
+```
+
+```
+valores
+```
+```
+0      95
+1      97
+2      93
+3      96
+4     100
+5      94
+6      78
+7      91
+8      92
+9      75
+10     97
+11     89
+12     87
+13     41
+14     92
+15     95
+16     83
+17     89
+18    100
+19     92
+```
+
+```
+df["rt_scoreINT"] = valores
+```
+```
+df.head()
+```
+
+| title  | director | rt_scoreINT  | 
+| ------------- | ------------- | ------------- | 
+| Castle in the Sky  | Hayao Miyazaki  | 95  | 
+| Grave of the Fireflies  | Isao Takahata	  |97  | 
+| My Neighbor Totoro  | Content Cell  | Content Cell  | 
+| Kiki's Delivery Service  | Hayao Miyazaki  | 93  | 
+| Only Yesterday  | Hayao Miyazaki  | 96  |
+| Content Cell  | Isao Takahata  | 100  |
+
+Ya tenemos una columna con los datos de rt_score trasnformados a entero
+```
+df.rt_scoreINT.sort_values()
+```
+13     41
+9      75
+6      78
+16     83
+12     87
+17     89
+11     89
+7      91
+14     92
+19     92
+8      92
+2      93
+5      94
+15     95
+0      95
+3      96
+10     97
+1      97
+4     100
+18    100
+
+```
+df.rt_scoreINT.sort_values().value_counts()
+```
+92     3
+95     2
+89     2
+100    2
+97     2
+94     1
+93     1
+91     1
+87     1
+
+```
+df.rt_scoreINT.sort_values().value_counts().plot(kind="pie")
+```
+![](https://raw.githubusercontent.com/DevPhantomUNAM/Proyecto_Visualizacion-De-Datos-Desde-API-Ghilbli-Con-Python/main/assets/img/gra2.jpg)
+
+### 4.3 People 
+
+```
+len(people)
+```
+```
+43
+```
+Tenemos que contamos con 43 personajes (no son todos)
+```
+for i in people:
+    print(i['name'])
+```
+
+```
+* Pazu
+* Lusheeta Toel Ul Laputa
+* Dola
+* Romska Palo Ul Laputa
+* Uncle Pom
+* General Muoro
+* Duffi
+* Louis
+* Charles
+* Henri
+* Motro
+* Okami
+* Ashitaka
+* San
+* Eboshi
+* Jigo
+* Kohroku
+* Gonza
+* Hii-sama
+* Yakul
+* Shishigami
+* Moro
+* Jiji
+* Satsuki Kusakabe
+* Mei Kusakabe
+* Tatsuo Kusakabe
+* Yasuko Kusakabe
+* Granny
+* Kanta Ogaki
+* Totoro
+* Chu Totoro
+* Chibi Totoro
+* Catbus
+* Niya
+* Renaldo Moon aka Moon aka Muta
+* Cat King
+* Yuki
+* Haru
+* Baron Humbert von Gikkingen
+* Natori
+* Colonel Muska
+* Porco Rosso
+* Sosuke
+```
+ 
+
+
