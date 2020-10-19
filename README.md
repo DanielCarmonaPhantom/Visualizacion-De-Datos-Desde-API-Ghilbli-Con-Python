@@ -117,3 +117,36 @@ len(films)
 20
 ```
 
+Aunque son 22, en la Api solo muestran 20
+
+¿Cómo podemos saber cuales son las películas que si hay?
+
+#### Obtener todas las películas
+
+```
+for film in films:
+    print(film['title'])
+```
+```
+Castle in the Sky
+Grave of the Fireflies
+My Neighbor Totoro
+Kiki's Delivery Service
+Only Yesterday
+Porco Rosso
+Pom Poko
+Whisper of the Heart
+Princess Mononoke
+My Neighbors the Yamadas
+Spirited Away
+The Cat Returns
+Howl's Moving Castle
+Tales from Earthsea
+Ponyo
+Arrietty
+From Up on Poppy Hill
+The Wind Rises
+The Tale of the Princess Kaguya
+When Marnie Was There
+```
+
