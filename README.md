@@ -42,7 +42,7 @@ Así que para los films utilizaremos la siguiente url:
 url = 'https://ghibliapi.herokuapp.com/films'
 ```
 
-Y hacemos la petición y la guardamos en una variable response. Despues validamos si la petición fue existosa evaluando el status.code de nuestra variable siendo 200 (Para más información buscar información sobre las respuestas de response) 
+Y hacemos la petición y la guardamos en una variable response. Despues validamos si la petición fue exitosa evaluando el status.code de nuestra variable siendo 200 (Para más información buscar información sobre las respuestas de response) 
 
 ```
 response = requests.get(url)
@@ -51,7 +51,7 @@ if response.status_code == 200:
   # Your code
 ```
 
-Asi que guardaremos los datos obtenidos en nuestra variable, haremos una conversion json() 
+Así que guardaremos los datos obtenidos en nuestra variable, haremos una conversion json() 
 
 ```
 films = response.json()
@@ -440,7 +440,7 @@ peopledf
 | Totoro  | NA	 |
 | Cat King  | Male	  |
 
-Para optener los personajes con genero 'Female' hacemos una evaluación
+Para obtener los personajes con genero 'Female' hacemos una evaluación
 
 ```
 len(peopledf[peopledf.gender == "Female" ])
