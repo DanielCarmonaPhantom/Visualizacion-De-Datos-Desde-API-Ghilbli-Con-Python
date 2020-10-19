@@ -203,4 +203,32 @@ df
 | Princess Mononoke  |Ashitaka, a prince of the disappearing Ainu tribe, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to protect the forest, and Lady Eboshi, who is trying to destroy it. Ashitaka must find a way to bring balance to this conflict.  | Hayao Miyazaki  |1997  | 92  | 
 | Spirited Away  | Spirited Away is an Oscar winning Japanese animated film about a ten year old girl who wanders away from her parents along a path that leads to a world ruled by strange and unusual monster-like animals. Her parents have been changed into pigs along with others inside a bathhouse full of these creatures. Will she ever see the world how it once was? | Hayao Miyazaki  | 2001  | 97  | 
 
+* Ahora que tenemos los datos, podemos saber varios insights:
+    * Directores de cada pelicula
+    * El score que tuvo cada película
 
+### 4.2.1 Obtendremos los films que realizo el director "Hayap Miyazaki"
+```
+df.director
+```
+
+.0           Hayao Miyazaki
+.1            Isao Takahata
+.2           Hayao Miyazaki
+.3           Hayao Miyazaki
+.4            Isao Takahata
+.5           Hayao Miyazaki
+.6            Isao Takahata
+.7          Yoshifumi Kondō
+.8           Hayao Miyazaki
+.9            Isao Takahata
+.10          Hayao Miyazaki
+.11         Hiroyuki Morita
+.12          Hayao Miyazaki
+.13           Gorō Miyazaki
+.14          Hayao Miyazaki
+.15    Hiromasa Yonebayashi
+.16           Gorō Miyazaki
+.17          Hayao Miyazaki
+.18           Isao Takahata
+.19    Hiromasa Yonebayashi
