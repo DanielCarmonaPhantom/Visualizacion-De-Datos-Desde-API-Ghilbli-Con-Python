@@ -249,3 +249,20 @@ Yoshifumi Kondō         1
 Name: director, dtype: int64
 ```
 
+Vemos que el director 'Hayao Miyazaki' estuvo presente en 9 films, veamos cuales fueron
+
+```
+df[df.director == "Hayao Miyazaki"]
+```
+
+| title  | director| 
+| ------------- | ------------- | 
+| Castle in the Sky  | Hayao Miyazaki  | 
+| My Neighbor Totoro  | Hayao Miyazaki  | 
+| Kiki's Delivery Service  | Hayao Miyazaki  | 
+| Porco Rosso  | Hayao Miyazaki  | 
+| Princess Mononoke  | Hayao Miyazaki  | 
+| Spirited Away  | Hayao Miyazaki  | 
+| Howl's Moving Castle  | Hayao Miyazaki  | 
+| Ponyo  | Content Cell  | 
+| The Wind Rises  | Hayao Miyazaki  | 
